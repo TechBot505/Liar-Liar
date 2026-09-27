@@ -19,9 +19,10 @@ export const isAuthEnabledClient = clerkPublishableKey.length > 0;
 
 /** PartyKit host, defaulting to the local dev server. */
 export const partyHost =
-  process.env.NEXT_PUBLIC_PARTYKIT_HOST ?? "localhost:1999";
+  process.env.NEXT_PUBLIC_PARTYKIT_HOST || "localhost:1999";
 
 /** Public app origin, used for invite links / QR codes and share cards. */
 export const appUrl =
-  process.env.NEXT_PUBLIC_APP_URL ??
+  // `||` (not `??`) so an empty value set in a hosting dashboard falls back too.
+  process.env.NEXT_PUBLIC_APP_URL?.replace(/\/+$/, "") ||
   (typeof window !== "undefined" ? window.location.origin : "http://localhost:3000");
