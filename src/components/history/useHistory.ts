@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { isAuthEnabledClient } from "@/lib/env";
 import { normalizeAvatar } from "@/lib/avatar";
 import { useHistoryStore, useHydrated, type GameSummary } from "@/lib/store";
+import { useAuthStore } from "@/lib/store/auth";
 import { historyKey, type HistoryItem } from "./types";
 
 interface CloudPlayer {
@@ -73,9 +74,16 @@ export function useHistory(): { items: HistoryItem[]; loading: boolean } {
   const hydrated = useHydrated();
   const local = useHistoryStore((s) => s.games);
   const [cloud, setCloud] = useState<HistoryItem[] | null>(null);
+  const isLoaded = useAuthStore((s) => s.isLoaded);
+  const isSignedIn = useAuthStore((s) => s.isSignedIn);
 
   useEffect(() => {
-    if (!isAuthEnabledClient) return;
+    // Only signed-in users have cloud history; skip while guest/loading so we
+    // never fire an unauthenticated /api/history that just 401s.
+    if (!isAuthEnabledClient || !isLoaded || !isSignedIn) {
+      setCloud(null);
+      return;
+    }
     let alive = true;
     const load = (): void => {
       void fetch("/api/history")
@@ -93,7 +101,7 @@ export function useHistory(): { items: HistoryItem[]; loading: boolean } {
       alive = false;
       window.removeEventListener(HISTORY_REFRESH_EVENT, load);
     };
-  }, []);
+  }, [isLoaded, isSignedIn]);
 
   const items = useMemo(() => {
     const map = new Map<string, HistoryItem>();

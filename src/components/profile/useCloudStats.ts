@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { isAuthEnabledClient } from "@/lib/env";
+import { useAuthStore } from "@/lib/store/auth";
 
 /** Aggregate lifetime stats served by GET /api/stats for a signed-in user. */
 export interface CloudStats {
@@ -21,9 +22,16 @@ export interface CloudStats {
  */
 export function useCloudStats(): CloudStats | null {
   const [stats, setStats] = useState<CloudStats | null>(null);
+  const isLoaded = useAuthStore((s) => s.isLoaded);
+  const isSignedIn = useAuthStore((s) => s.isSignedIn);
 
   useEffect(() => {
-    if (!isAuthEnabledClient) return;
+    // Skip the fetch entirely for guests / while Clerk loads so signed-out
+    // sessions never hit /api/stats and get a 401.
+    if (!isAuthEnabledClient || !isLoaded || !isSignedIn) {
+      setStats(null);
+      return;
+    }
     let alive = true;
     void fetch("/api/stats")
       .then((r) => (r.ok ? r.json() : null))
@@ -36,7 +44,7 @@ export function useCloudStats(): CloudStats | null {
     return () => {
       alive = false;
     };
-  }, []);
+  }, [isLoaded, isSignedIn]);
 
   return stats;
 }

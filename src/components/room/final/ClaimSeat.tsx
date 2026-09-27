@@ -10,11 +10,11 @@ import { useProfileStore } from "@/lib/store/profile";
  * are swallowed — claiming is best-effort.
  */
 export function ClaimSeat(): JSX.Element | null {
-  const { isSignedIn } = useUser();
+  const { isLoaded, isSignedIn } = useUser();
   const done = useRef(false);
 
   useEffect(() => {
-    if (!isSignedIn || done.current) return;
+    if (!isLoaded || !isSignedIn || done.current) return;
     const token = useProfileStore.getState().profile?.token;
     if (!token) return;
     done.current = true;
@@ -25,7 +25,7 @@ export function ClaimSeat(): JSX.Element | null {
     }).catch(() => {
       /* best-effort */
     });
-  }, [isSignedIn]);
+  }, [isLoaded, isSignedIn]);
 
   return null;
 }
