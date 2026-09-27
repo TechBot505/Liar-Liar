@@ -1,0 +1,19 @@
+import type { Question } from "../types";
+
+export const questions: Question[] = [
+  { id: "headlines:001", prompt: "An internet phenomenon collects real bizarre arrest headlines that all begin with the words \"Florida ____.\"", answer: "Man", alts: ["man"], note: "\"Florida Man\" became a meme of real, terrible-superhero-style news." },
+  { id: "headlines:002", prompt: "In 1985 a black bear in the Georgia mountains was found dead after eating a smuggler's dropped stash of ____.", answer: "cocaine", alts: ["coke"], note: "It ate ~75 lbs of cocaine; the tale inspired the film \"Cocaine Bear.\"" },
+  { id: "headlines:003", prompt: "After drug lord Pablo Escobar died, Colombia was left with a wild, breeding population of his escaped ____.", answer: "hippos", alts: ["hippopotamuses", "hippopotami"], note: "His private zoo's hippos now number over 100 in Colombian rivers." },
+  { id: "headlines:004", prompt: "A crested macaque in Indonesia sparked a years-long copyright battle in 2011 by grabbing a camera and taking a ____.", answer: "selfie", note: "Courts ruled the monkey couldn't hold copyright to its own photo." },
+  { id: "headlines:005", prompt: "In 2011-2012 thieves in Quebec pulled off a multimillion-dollar heist by siphoning a strategic reserve of ____.", answer: "maple syrup", alts: ["syrup"], note: "About C$18M of syrup vanished from Canada's global reserve." },
+  { id: "headlines:006", prompt: "A Colorado chicken named Mike survived a year and a half in 1945 after a farmer cut off most of its ____.", answer: "head", note: "The axe missed the brain stem; \"Miracle Mike\" toured the country." },
+  { id: "headlines:007", prompt: "In 1932 the Australian army deployed soldiers with machine guns and lost a war against ____.", answer: "emus", alts: ["emu"], note: "The birds scattered and outran the bullets; the \"Emu War\" was a bust." },
+  { id: "headlines:008", prompt: "In 1970 Oregon highway crews tried to clear a beached whale carcass by blowing it up with ____.", answer: "dynamite", alts: ["half a ton of dynamite", "explosives"], note: "Blubber rained down and crushed a car a quarter-mile away." },
+  { id: "headlines:009", prompt: "In the British endurance sport of ferret-legging, contestants trap live ferrets inside their ____.", answer: "trousers", alts: ["pants", "trousers"], note: "Record holders have lasted hours with clawing ferrets down their pants.", adult: true },
+  { id: "headlines:010", prompt: "At an annual English hillside contest in Gloucestershire, hundreds hurl themselves down a steep slope chasing a wheel of ____.", answer: "cheese", note: "The Double Gloucester rolls fast enough to break bones on Cooper's Hill." },
+  { id: "headlines:011", prompt: "At Finland's World Championships a man races an obstacle course carrying his wife and wins her weight in ____.", answer: "beer", note: "Wife-carrying's grand prize is literally the wife's weight in beer." },
+  { id: "headlines:012", prompt: "Each August the Spanish town of Bunol holds a giant street brawl where tens of thousands throw ____.", answer: "tomatoes", alts: ["tomato"], note: "La Tomatina uses over 100 tons of overripe tomatoes." },
+  { id: "headlines:013", prompt: "The Italian town of Ivrea holds a February festival where costumed teams pelt each other with ____.", answer: "oranges", alts: ["orange"], note: "The Battle of the Oranges flings tons of citrus every year." },
+  { id: "headlines:014", prompt: "In 2016 an octopus named Inky escaped a New Zealand aquarium by squeezing out and slithering down a ____.", answer: "drainpipe", alts: ["drain", "pipe"], note: "Inky slipped through a gap and took a pipe straight to the sea." },
+  { id: "headlines:015", prompt: "A San Diego Zoo orangutan named Ken Allen drew crowds in the 1980s for his repeated jailbreak-style ____.", answer: "escapes", alts: ["escape", "breakouts"], note: "Ken Allen unscrewed bolts and climbed out so often he got fan clubs." },
+];

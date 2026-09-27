@@ -1,0 +1,19 @@
+import type { Question } from "../types";
+
+export const questions: Question[] = [
+  { id: "headlines:076", prompt: "A Colorado town throws an annual festival honoring a local family's grandfather kept frozen in a shed as a ____.", answer: "corpse", alts: ["dead body", "body"], note: "\"Frozen Dead Guy Days\" features coffin races and a chilly \"Grandpa.\"" },
+  { id: "headlines:077", prompt: "A town in Thailand lays out a giant annual banquet of fruit and sweets for its resident ____.", answer: "monkeys", alts: ["monkey", "macaques"], note: "Lopburi's Monkey Buffet Festival piles up tons of food for the macaques." },
+  { id: "headlines:078", prompt: "In Turkey, a traditional winter spectator sport pits two hulking male ____ against each other.", answer: "camels", alts: ["camel"], note: "Camel wrestling draws big crowds along the Aegean coast." },
+  { id: "headlines:079", prompt: "Every winter, islanders in Shetland dress as Vikings and ceremonially set fire to a replica ____.", answer: "longship", alts: ["Viking ship", "galley", "boat", "ship"], note: "Up Helly Aa ends with a torch-lit galley going up in flames." },
+  { id: "headlines:080", prompt: "A Georgia town launched the \"Redneck Games\" featuring events like the mud-pit ____ flop.", answer: "belly", note: "Other events included bobbing for pigs' feet and the \"armpit serenade.\"" },
+  { id: "headlines:081", prompt: "The tallest man in recorded history, from Illinois, stood nearly ____ feet tall.", answer: "nine", alts: ["9", "8'11", "8 feet 11"], note: "Robert Wadlow reached 8 ft 11 in and was still growing when he died." },
+  { id: "headlines:082", prompt: "The world's tallest living man, from Turkey, measures over ____ feet tall.", answer: "eight", alts: ["8", "8'2", "8 feet 2"], note: "Sultan Kosen also has some of the largest hands and feet on record." },
+  { id: "headlines:083", prompt: "The world's most tattooed man has ink covering ____ percent of his body, including his gums and eyelids.", answer: "100", alts: ["one hundred", "a hundred"], note: "Lucky Diamond Rich then added white and black designs over the black." },
+  { id: "headlines:084", prompt: "In the 1980s pop star Michael Jackson kept, dressed and toured with a pet ____ named Bubbles.", answer: "chimpanzee", alts: ["chimp", "monkey"], note: "Bubbles later retired to an ape sanctuary in Florida." },
+  { id: "headlines:085", prompt: "A famous gorilla named Koko learned sign language and, when asked for a pet, adopted a ____.", answer: "kitten", alts: ["cat"], note: "Koko named her first kitten \"All Ball\" and mourned it when it died." },
+  { id: "headlines:086", prompt: "A WWI carrier ____ named Cher Ami delivered a message that saved nearly 200 trapped soldiers despite being shot.", answer: "pigeon", alts: ["bird"], note: "Cher Ami flew on with a wounded leg and is now in the Smithsonian." },
+  { id: "headlines:087", prompt: "A ship's ____ named Simon is the only feline ever awarded the Dickin Medal for wartime bravery.", answer: "cat", note: "Simon kept the crew's morale up and hunted rats despite his own wounds." },
+  { id: "headlines:088", prompt: "A US Marine unit in the Korean War bought, adopted and promoted a pack ____ named Reckless to sergeant.", answer: "horse", alts: ["mare", "pony"], note: "Reckless hauled ammo under fire and was decorated for it." },
+  { id: "headlines:089", prompt: "In 1923 a lost dog nicknamed Bobbie the Wonder Dog found his way home to Oregon by walking about ____ miles.", answer: "2,500", alts: ["2500", "2,551", "2551"], note: "He crossed the US in winter and arrived months later, footsore." },
+  { id: "headlines:090", prompt: "In 1996 Scottish scientists named the first cloned mammal \"Dolly,\" after singer Dolly ____.", answer: "Parton", alts: ["parton"], note: "She was cloned from a mammary cell, hence the Dolly Parton nod." },
+];

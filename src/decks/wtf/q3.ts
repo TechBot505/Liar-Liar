@@ -1,0 +1,27 @@
+import type { Question } from "../types";
+
+export const questions: Question[] = [
+  { id: "wtf:046", prompt: "In 1932 the Australian military deployed troops and lost a war against ____.", answer: "emus", alts: ["emu"], note: "Soldiers with machine guns still couldn't beat the birds." },
+  { id: "wtf:047", prompt: "In 1814 London, several people drowned in a sudden flood of ____.", answer: "beer", note: "A giant brewery vat ruptured and swept through the slums." },
+  { id: "wtf:048", prompt: "Legend says the Greek playwright Aeschylus was killed by a falling ____.", answer: "tortoise", note: "An eagle supposedly mistook his bald head for a rock." },
+  { id: "wtf:049", prompt: "In 1912 an inventor died testing a parachute suit by jumping off the ____.", answer: "Eiffel Tower", note: "The 'Flying Tailor' leapt in front of a crowd and film cameras." },
+  { id: "wtf:050", prompt: "In 1927 dancer Isadora Duncan was killed by her ____ in a moving car.", answer: "scarf", note: "It caught in the spokes of the open-top car's wheel." },
+  { id: "wtf:051", prompt: "In 1771 Sweden's King Adolf Frederick died after overeating ____.", answer: "dessert", alts: ["food", "semla"], note: "Sweden calls him the king who ate himself to death." },
+  { id: "wtf:052", prompt: "In 1567 an Austrian man died after tripping over his own ____.", answer: "beard", note: "A fire alarm made him stumble on his 4.5-foot beard." },
+  { id: "wtf:053", prompt: "In 1325 two Italian cities went to war over a stolen wooden ____.", answer: "bucket", note: "Modena and Bologna fought the War of the Bucket." },
+  { id: "wtf:054", prompt: "In 1859 the US and Britain nearly went to war over a dead ____.", answer: "pig", note: "In the 'Pig War,' the pig was the only casualty." },
+  { id: "wtf:055", prompt: "In 897 AD a dead ____ was dug up and put on trial in Rome.", answer: "pope", note: "The rotting corpse was found guilty at the Cadaver Synod." },
+  { id: "wtf:056", prompt: "Whiskey maker Jack Daniel reportedly died after kicking a ____ in anger.", answer: "safe", note: "He kicked it after forgetting the combination and got an infection." },
+  { id: "wtf:057", prompt: "Astronomer Tycho Brahe fell fatally ill after refusing to leave a ____.", answer: "banquet", alts: ["dinner", "feast"], note: "Etiquette kept him seated until his bladder gave out." },
+  { id: "wtf:058", prompt: "Assassins poisoned, shot, and finally ____ Rasputin to kill him.", answer: "drowned", alts: ["drown"], note: "Legend says the mystic was extremely hard to kill in 1916." },
+  { id: "wtf:059", prompt: "In 1618 Prague, officials survived being thrown out of a ____.", answer: "window", note: "The men fell about 70 feet but survived the drop." },
+  { id: "wtf:060", prompt: "In 1858 the reek of London's River Thames was called the Great ____.", answer: "Stink", note: "The stench finally forced the city to build proper sewers." },
+  { id: "wtf:061", prompt: "An 1896 US patent describes a ____ that automatically tips itself.", answer: "hat", note: "It bowed on its own when the wearer nodded." },
+  { id: "wtf:062", prompt: "A 1977 US patent covers a method for hiding baldness with a ____.", answer: "comb-over", alts: ["combover"], note: "Two men patented the classic hair maneuver." },
+  { id: "wtf:063", prompt: "US Patent 5,443,036 is a method of exercising a ____ with a laser pointer.", answer: "cat", note: "Yes, chasing a laser dot is patented." },
+  { id: "wtf:064", prompt: "A 1965 US patent proposed delivering babies using ____ force.", answer: "centrifugal", note: "The device would spin the mother to help push the baby out." },
+  { id: "wtf:065", prompt: "A real US patent protects the 'Beerbrella,' a tiny umbrella for your ____.", answer: "beer", note: "It clips on to shade your drink from the sun." },
+  { id: "wtf:066", prompt: "A 1980s patent describes a wearable face ____ to stop people overeating.", answer: "mask", note: "The cage-like device was meant to block snacking." },
+  { id: "wtf:067", prompt: "A UK patent describes a tiny ____ to help spiders climb out of a bathtub.", answer: "ladder", note: "A little ramp so the spider can escape the tub." },
+  { id: "wtf:068", prompt: "There is a real patent for a wearable ____ for pet birds.", answer: "diaper", note: "A small pouch so house birds don't make a mess." },
+];

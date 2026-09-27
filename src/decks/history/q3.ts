@@ -18,7 +18,7 @@ export const questions: Question[] = [
   { id: "history:065", prompt: "The Great Sphinx of Giza is famously missing its ____.", answer: "nose", note: "It vanished centuries ago." },
   { id: "history:066", prompt: "The French Revolution began in ____.", answer: "1789", note: "The storming of the Bastille marked its start." },
   { id: "history:067", prompt: "Mansa Musa gave away so much ____ that he crashed its value.", answer: "gold", note: "His pilgrimage disrupted economies for years." },
-  { id: "history:068", prompt: "The word robot comes from a Czech word for forced ____.", answer: "labor", alts: ["labour", "work"], note: "It first appeared in a 1920 play." },
+  { id: "history:068", prompt: "In Czech, the origin of the word 'robot' means forced ____.", answer: "labor", alts: ["labour", "work"], note: "It first appeared in Karel Capek's 1920 play R.U.R." },
   { id: "history:069", prompt: "Winston ____ won a Nobel Prize in Literature.", answer: "Churchill", note: "He was honored in 1953 for his writing." },
   { id: "history:070", prompt: "The Titanic sank in the year ____.", answer: "1912", note: "On its maiden voyage across the Atlantic." },
   { id: "history:071", prompt: "English coffeehouses were once nicknamed penny ____.", answer: "universities", note: "A penny cup bought lively conversation." },

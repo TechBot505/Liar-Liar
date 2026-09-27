@@ -1,0 +1,31 @@
+import type { Question } from "../types";
+
+// Historical medicine & remedies, plus more animal oddities.
+export const questions: Question[] = [
+  { id: "nasty:105", prompt: "18th-century rescuers revived the drowned with tobacco smoke ____.", answer: "enemas", adult: true, note: "Bellows blew smoke up the rectum to warm the victim." },
+  { id: "nasty:106", prompt: "Europeans once ate powdered ____ as medicine.", answer: "mummies", alts: ["mummy"], note: "'Mumia' was ground-up embalmed corpses, sold for centuries." },
+  { id: "nasty:107", prompt: "Doctors once tasted a patient's ____ to spot diabetes.", answer: "urine", alts: ["pee"], adult: true, note: "Sweet urine earned the name diabetes 'mellitus,' honeyed." },
+  { id: "nasty:108", prompt: "A 1920s health tonic laced water with radioactive ____.", answer: "radium", note: "Radithor killed Eben Byers; his jaw reportedly fell off." },
+  { id: "nasty:109", prompt: "For centuries the go-to cure for almost anything was ____.", answer: "bloodletting", alts: ["bleeding"], note: "Washington was drained of pints just before he died." },
+  { id: "nasty:110", prompt: "Trepanation meant drilling a hole straight into the ____.", answer: "skull", alts: ["head"], note: "One of the oldest surgeries, to free 'pressure' or spirits." },
+  { id: "nasty:111", prompt: "Bayer first sold heroin as a ____ remedy.", answer: "cough", note: "It was even marketed for children around 1898." },
+  { id: "nasty:112", prompt: "Executioners once sold the fresh ____ of the hanged.", answer: "blood", note: "'Corpse medicine' drinkers believed it cured ailments." },
+  { id: "nasty:113", prompt: "Mercury was long prescribed to treat ____.", answer: "syphilis", note: "'A night with Venus, a lifetime with Mercury.'" },
+  { id: "nasty:114", prompt: "Doctors packed wounds with live ____ to clean them.", answer: "maggots", note: "They eat dead flesh and are still used in medicine today." },
+  { id: "nasty:115", prompt: "The transorbital lobotomy entered through the ____.", answer: "eye socket", alts: ["eye"], note: "Lobotomy pioneer Egas Moniz won a 1949 Nobel, but not for this ice-pick version." },
+  { id: "nasty:116", prompt: "Victorian women ate ____ wafers for a pale complexion.", answer: "arsenic", note: "The poison promised clear, fashionable skin." },
+  { id: "nasty:117", prompt: "Ancient Egyptians treated infections with moldy ____.", answer: "bread", note: "An accidental, pre-penicillin form of antibiotic." },
+  { id: "nasty:118", prompt: "Castoreum, an old flavoring, comes from a beaver's ____.", answer: "butt", alts: ["rear"], adult: true, note: "Secreted near glands by the anus; once used in food." },
+  { id: "nasty:119", prompt: "Ancient Egyptian birth control used crocodile ____.", answer: "dung", alts: ["poop"], adult: true, note: "The pungent pessary supposedly blocked pregnancy." },
+  { id: "nasty:120", prompt: "Romans cleaned themselves with a shared toilet ____.", answer: "sponge", adult: true, note: "The 'tersorium,' a sea sponge on a stick, was communal." },
+  { id: "nasty:121", prompt: "Romans reportedly whitened their teeth with ____.", answer: "urine", adult: true, note: "Ammonia in it acted as an early bleaching agent." },
+  { id: "nasty:122", prompt: "Cheetahs physically cannot ____.", answer: "roar", note: "They chirp, purr, and meow but never manage a roar." },
+  { id: "nasty:123", prompt: "A crocodile cannot stick out its ____.", answer: "tongue", note: "A membrane pins it to the floor of the mouth." },
+  { id: "nasty:124", prompt: "Owls cannot move their ____, so they swivel their heads.", answer: "eyes", alts: ["eyeballs"], note: "Their tube-shaped eyes are locked into the sockets." },
+  { id: "nasty:125", prompt: "Scorpions ____ under ultraviolet light.", answer: "glow", note: "Their exoskeleton fluoresces bright cyan; the reason is unknown." },
+  { id: "nasty:126", prompt: "Flamingos are actually born ____.", answer: "grey", alts: ["gray", "white"], note: "Their pink builds up from pigments in their food." },
+  { id: "nasty:127", prompt: "A lyrebird can perfectly mimic a ____.", answer: "chainsaw", alts: ["chainsaws"], note: "It also copies camera shutters and car alarms." },
+  { id: "nasty:128", prompt: "Star-nosed moles can smell ____.", answer: "underwater", note: "They exhale and re-inhale bubbles to sniff out prey." },
+  { id: "nasty:129", prompt: "A hummingbird's heart can top ____ beats a minute.", answer: "1,200", alts: ["1200"], note: "They also take hundreds of breaths every minute." },
+  { id: "nasty:130", prompt: "A blue whale's tongue can weigh as much as an ____.", answer: "elephant", note: "Its heart is the size of a small car; its aorta is wide enough to crawl through." },
+];

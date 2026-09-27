@@ -1,0 +1,31 @@
+import type { Question } from "../types";
+
+// Animal defense & bodily functions.
+export const questions: Question[] = [
+  { id: "nasty:001", prompt: "Sea cucumbers eject their own ____ to defend themselves.", answer: "guts", alts: ["organs", "intestines"], note: "Called evisceration; they regrow the lost organs later." },
+  { id: "nasty:002", prompt: "A pearlfish lives inside a sea cucumber's ____.", answer: "anus", alts: ["butt", "rear"], adult: true, note: "It reverses in tail-first through the cucumber's rear opening." },
+  { id: "nasty:003", prompt: "Hippos secrete a red 'blood ____' that works as sunscreen.", answer: "sweat", note: "It is neither blood nor sweat, but a reddish antiseptic." },
+  { id: "nasty:004", prompt: "A hagfish smothers attackers in gallons of ____.", answer: "slime", note: "It can clog a predator's gills within seconds." },
+  { id: "nasty:005", prompt: "Opossums fake being ____ when threatened.", answer: "dead", note: "They also leak a foul, corpse-like smell to sell it." },
+  { id: "nasty:006", prompt: "A skunk sprays musk from glands near its ____.", answer: "anus", alts: ["butt", "rear"], adult: true, note: "The oily spray can hit targets up to 10 feet away." },
+  { id: "nasty:007", prompt: "Cockroaches can survive for weeks without a ____.", answer: "head", note: "They breathe through their body and die of thirst." },
+  { id: "nasty:008", prompt: "Lobsters pee out of their ____.", answer: "face", alts: ["faces", "heads"], adult: true, note: "Bladders sit under the brain; the urine signals status." },
+  { id: "nasty:009", prompt: "Horned lizards squirt ____ from their eyes at predators.", answer: "blood", note: "The jet can shoot several feet to deter coyotes." },
+  { id: "nasty:010", prompt: "Vultures poop on their own ____ to cool down.", answer: "legs", adult: true, note: "Urohidrosis both cools them and kills bacteria." },
+  { id: "nasty:011", prompt: "A vulture's stomach acid is strong enough to kill ____.", answer: "anthrax", note: "It lets them safely eat rotten, diseased carcasses." },
+  { id: "nasty:012", prompt: "A honey badger can shrug off cobra ____.", answer: "venom", note: "It may pass out, then wake up and finish its meal." },
+  { id: "nasty:013", prompt: "Sloths climb down to poop only about once a ____.", answer: "week", adult: true, note: "They can shed a third of their weight in one trip." },
+  { id: "nasty:014", prompt: "Bombardier beetles spray a boiling ____ at attackers.", answer: "chemical", alts: ["acid", "liquid"], note: "The near-100C blast fires from the beetle's rear end." },
+  { id: "nasty:015", prompt: "Sperm whales produce ____, a waxy lump used in perfume.", answer: "ambergris", note: "Aged gut secretion once worth more than its weight in gold." },
+  { id: "nasty:016", prompt: "A tiger's urine smells like buttered ____.", answer: "popcorn", adult: true, note: "Zookeepers swear big-cat marking really smells like it." },
+  { id: "nasty:017", prompt: "Zombie-ant fungus makes an ant clamp onto a ____.", answer: "leaf", alts: ["twig", "branch"], note: "Cordyceps then sprouts a stalk from the ant's head." },
+  { id: "nasty:018", prompt: "The corpse flower smells like rotting ____.", answer: "flesh", alts: ["meat", "corpse"], note: "Titan arum mimics a dead body to lure in flies." },
+  { id: "nasty:019", prompt: "A pistol shrimp's snap makes a bubble hotter than the ____.", answer: "sun", note: "Collapsing cavitation briefly nears the Sun's surface temp." },
+  { id: "nasty:020", prompt: "Vampire bats will ____ blood to feed hungry roost-mates.", answer: "regurgitate", alts: ["vomit", "share"], note: "They repay past donors, a rare case of animal sharing." },
+  { id: "nasty:021", prompt: "Naked mole rats can survive ~18 minutes with no ____.", answer: "oxygen", note: "They switch to a plant-like fructose metabolism." },
+  { id: "nasty:022", prompt: "Naked mole rats barely feel pain from ____.", answer: "acid", note: "They lack a key pain-signaling neurotransmitter." },
+  { id: "nasty:023", prompt: "Tardigrades can survive the vacuum of ____.", answer: "space", note: "They curl into a 'tun' and switch their metabolism off." },
+  { id: "nasty:024", prompt: "Sea otters have the densest ____ of any animal.", answer: "fur", note: "Up to a million hairs pack into each square inch." },
+  { id: "nasty:025", prompt: "A woodpecker's tongue wraps around its ____.", answer: "skull", alts: ["brain"], note: "Tongue wraps the skull to shoot out and grab insects; 'brain cushion' myth debunked 2022." },
+  { id: "nasty:026", prompt: "Frogs can vomit up their entire ____.", answer: "stomach", note: "They wipe it clean with their arms, then swallow it back." },
+];

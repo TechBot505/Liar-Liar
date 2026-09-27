@@ -1,0 +1,26 @@
+import type { Question } from "../types";
+
+export const questions: Question[] = [
+  { id: "wtf:024", prompt: "In 1950 a New Mexico town renamed itself after a radio game show called ____.", answer: "Truth or Consequences", note: "It changed its name for the show's 10th anniversary." },
+  { id: "wtf:025", prompt: "There is a real fishing town in Newfoundland, Canada, called ____.", answer: "Dildo", note: "The odd name may date back to the 1700s.", adult: true },
+  { id: "wtf:026", prompt: "A small town in the US state of Maryland is unfortunately named ____.", answer: "Accident", note: "Residents proudly call themselves Accidentals." },
+  { id: "wtf:027", prompt: "A Pennsylvania town founded in 1754 is named ____.", answer: "Intercourse", note: "The origin of the name is still debated.", adult: true },
+  { id: "wtf:028", prompt: "Reykjavik, Iceland has a museum devoted entirely to ____.", answer: "penises", alts: ["penis", "phalluses"], note: "The Phallological Museum displays specimens from dozens of species.", adult: true },
+  { id: "wtf:029", prompt: "Zagreb, Croatia has an entire museum dedicated to ____.", answer: "broken relationships", note: "Exes donate mementos left over from failed love." },
+  { id: "wtf:030", prompt: "New Delhi, India is home to the Sulabh International Museum of ____.", answer: "toilets", alts: ["toilet"], note: "It traces the history of sanitation over thousands of years." },
+  { id: "wtf:031", prompt: "The town of Austin, Minnesota hosts a museum dedicated to the canned meat ____.", answer: "Spam", note: "The city is the birthplace of the Hormel product." },
+  { id: "wtf:032", prompt: "A museum near Boston proudly displays only ____.", answer: "bad art", note: "Its motto celebrates art too bad to be ignored." },
+  { id: "wtf:033", prompt: "Avanos, Turkey has a cave museum filled with samples of human ____.", answer: "hair", note: "Visitors have left locks from thousands of women." },
+  { id: "wtf:034", prompt: "Osaka, Japan has a museum devoted entirely to instant ____.", answer: "ramen", alts: ["noodles"], note: "You can design your own Cup Noodles there." },
+  { id: "wtf:035", prompt: "La Crosse, Kansas calls itself the world capital of a museum of ____.", answer: "barbed wire", note: "Collectors prize rare 19th-century strands." },
+  { id: "wtf:036", prompt: "Fort Mitchell, Kentucky has a museum full of retired ventriloquist ____.", answer: "dummies", alts: ["dolls"], note: "Hundreds of the figures sit in Vent Haven." },
+  { id: "wtf:037", prompt: "Leeds Castle in England houses a museum of antique ____.", answer: "dog collars", note: "Some spiked collars date back centuries." },
+  { id: "wtf:038", prompt: "Mecca, California is home to the International ____ Museum.", answer: "Banana", note: "It holds thousands of banana-themed items." },
+  { id: "wtf:039", prompt: "Before alarm clocks, a ____ was paid to tap your window to wake you.", answer: "knocker-upper", alts: ["knocker upper"], note: "They used long poles or pea-shooters at bedroom windows." },
+  { id: "wtf:040", prompt: "In Tudor England, the ____ was the servant who helped the king use the toilet.", answer: "Groom of the Stool", note: "The role was oddly powerful and prestigious.", adult: true },
+  { id: "wtf:041", prompt: "A royal ____ was punished whenever the young prince misbehaved.", answer: "whipping boy", note: "He was educated alongside the prince as leverage." },
+  { id: "wtf:042", prompt: "A ____ was hired to eat a meal to absorb a dead person's sins.", answer: "sin-eater", alts: ["sin eater"], note: "The poor often took the grim job for a small fee." },
+  { id: "wtf:043", prompt: "In Tudor times a ____ was paid to dig human waste out of cesspits.", answer: "gong farmer", note: "They were only allowed to work at night.", adult: true },
+  { id: "wtf:044", prompt: "A 19th-century ____ waded into ponds to gather medical leeches.", answer: "leech collector", note: "They often used their own bare legs as bait." },
+  { id: "wtf:045", prompt: "Before the machine, a ____ was a person who did calculations by hand.", answer: "computer", note: "Teams of them once did NASA's math manually." },
+];

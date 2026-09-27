@@ -1,0 +1,19 @@
+import type { Question } from "../types";
+
+export const questions: Question[] = [
+  { id: "headlines:031", prompt: "Florida has its own smelly answer to Bigfoot, a foul-smelling swamp cryptid that locals call the ____.", answer: "skunk ape", alts: ["skunkape"], note: "Reported sightings cluster around the Everglades." },
+  { id: "headlines:032", prompt: "A 2015 London jewelry-vault burglary made global headlines mainly because the drilling burglars were all elderly ____.", answer: "pensioners", alts: ["pensioner", "seniors", "old men"], note: "The Hatton Garden gang were mostly in their 60s and 70s." },
+  { id: "headlines:033", prompt: "The gang behind the 2003 Antwerp diamond heist was tripped up after they left behind a half-eaten ____.", answer: "sandwich", note: "DNA on the sandwich helped tie the crew to the impregnable-vault job." },
+  { id: "headlines:034", prompt: "In 2008-09 a gang of star-struck Los Angeles teenagers burglarized the homes of ____ they tracked online.", answer: "celebrities", alts: ["celebrity", "stars"], note: "The \"Bling Ring\" hit Paris Hilton, Lindsay Lohan and others." },
+  { id: "headlines:035", prompt: "In 1990 two men disguised as ____ talked their way into a Boston museum and stole $500M in art.", answer: "police officers", alts: ["cops", "policemen", "police"], note: "The Gardner Museum theft remains the biggest art heist ever unsolved." },
+  { id: "headlines:036", prompt: "Every February an American town in Pennsylvania gathers to let a ____ named Phil predict the weather.", answer: "groundhog", alts: ["woodchuck"], note: "Punxsutawney Phil \"forecasts\" spring by seeing his shadow." },
+  { id: "headlines:037", prompt: "During WWII a Polish army unit adopted a bear named Wojtek who helped carry ____ at Monte Cassino.", answer: "ammunition", alts: ["shells", "artillery shells", "ammo"], note: "Wojtek was enlisted as a soldier so he could travel with the troops." },
+  { id: "headlines:038", prompt: "A ship's cat nicknamed Unsinkable Sam reportedly survived the sinking of ____ different warships in WWII.", answer: "three", alts: ["3"], note: "Sam allegedly outlived the Bismarck and two British ships." },
+  { id: "headlines:039", prompt: "In 1969 two men in London famously bought a ____ from Harrods department store and raised it in their flat.", answer: "lion", note: "Christian the lion was later rewilded and greeted his old owners warmly." },
+  { id: "headlines:040", prompt: "In the 1930s a family on the Isle of Man insisted their farmhouse was home to a talking ____ named Gef.", answer: "mongoose", note: "\"Gef the Talking Mongoose\" drew press and paranormal investigators." },
+  { id: "headlines:041", prompt: "A German horse called Clever Hans amazed crowds around 1900 by appearing to solve ____ problems.", answer: "math", alts: ["arithmetic", "maths"], note: "Hans was really reading tiny cues from his handler, not doing sums." },
+  { id: "headlines:042", prompt: "In the Central Asian sport of buzkashi, horseback riders fight to drag a headless ____ into a scoring circle.", answer: "goat", alts: ["goat carcass", "calf"], note: "The \"ball\" is a goat or calf carcass fought over on horseback.", adult: true },
+  { id: "headlines:043", prompt: "A Welsh town holds an annual marathon in which human runners race directly against ____.", answer: "horses", alts: ["horse"], note: "A human first beat the horses over the full course in 2004." },
+  { id: "headlines:044", prompt: "At an English world championship, players swing a horse chestnut on a string to smash their opponent's ____.", answer: "conker", alts: ["nut", "chestnut"], note: "The World Conker Championships crown a champ every autumn." },
+  { id: "headlines:045", prompt: "At a festival in Lancashire, England, competitors grapple and pin each other in a paddling pool full of ____.", answer: "gravy", note: "The World Gravy Wrestling Championships uses gallons of thick brown gravy." },
+];

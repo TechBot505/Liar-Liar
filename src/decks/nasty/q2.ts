@@ -1,0 +1,31 @@
+import type { Question } from "../types";
+
+// Animal mating oddities.
+export const questions: Question[] = [
+  { id: "nasty:027", prompt: "Male anglerfish permanently ____ into the female's body.", answer: "fuse", alts: ["melt"], adult: true, note: "He shrinks to a pair of sperm-producing organs." },
+  { id: "nasty:028", prompt: "Bedbugs reproduce by ____ insemination.", answer: "traumatic", adult: true, note: "The male stabs sperm straight through her body wall." },
+  { id: "nasty:029", prompt: "Male ducks have a corkscrew-shaped ____.", answer: "penis", alts: ["phallus"], adult: true, note: "Females evolved spiral tracts that coil the opposite way." },
+  { id: "nasty:030", prompt: "Female praying mantises may eat the male's ____ mid-mating.", answer: "head", adult: true, note: "He often keeps mating just fine without it." },
+  { id: "nasty:031", prompt: "Honeybee drones' genitals ____ during mating.", answer: "explode", alts: ["snap off"], adult: true, note: "The organ rips out with an audible pop, killing the drone." },
+  { id: "nasty:032", prompt: "Flatworms mate by ____ fencing.", answer: "penis", adult: true, note: "Two hermaphrodites duel; the loser gets inseminated." },
+  { id: "nasty:033", prompt: "Barnacles have the longest ____ for their body size.", answer: "penis", adult: true, note: "It can stretch up to eight times their body length." },
+  { id: "nasty:034", prompt: "Male cats have backward ____ on their penis.", answer: "spines", alts: ["barbs"], adult: true, note: "The rake triggers the female to ovulate." },
+  { id: "nasty:035", prompt: "Echidnas have a ____-headed penis.", answer: "four", adult: true, note: "They fire two heads at a time, alternating sides." },
+  { id: "nasty:036", prompt: "Female hyenas give birth through a ____.", answer: "pseudo-penis", adult: true, note: "An elongated clitoris; first births are often fatal." },
+  { id: "nasty:037", prompt: "Kangaroos have ____ vaginas.", answer: "three", adult: true, note: "Two channels take sperm; the middle one delivers young." },
+  { id: "nasty:038", prompt: "The right whale has the largest ____ of any animal.", answer: "testicles", adult: true, note: "The pair can weigh close to a ton combined." },
+  { id: "nasty:039", prompt: "Leopard slugs mate dangling from a rope of ____.", answer: "slime", alts: ["mucus"], adult: true, note: "They dangle entwined, unfurl large blue penises to swap sperm, then eat the rope." },
+  { id: "nasty:040", prompt: "Snakes and lizards have paired sex organs called ____.", answer: "hemipenes", adult: true, note: "They use one side at a time, whichever is handy." },
+  { id: "nasty:041", prompt: "Male giraffes taste a female's ____ to check fertility.", answer: "urine", alts: ["pee"], adult: true, note: "She pees into his mouth in the 'flehmen' response." },
+  { id: "nasty:042", prompt: "Cuttlefish males mimic ____ to sneak past rival guards.", answer: "females", note: "They flash female skin patterns on just one side." },
+  { id: "nasty:043", prompt: "A female octopus usually ____ after her eggs hatch.", answer: "dies", alts: ["die"], note: "She stops eating and self-destructs while guarding them." },
+  { id: "nasty:044", prompt: "The immortal jellyfish can revert back to its ____ stage.", answer: "youth", alts: ["polyp", "baby"], note: "Turritopsis dohrnii can rewind its entire life cycle." },
+  { id: "nasty:045", prompt: "Male platypuses have venomous ____.", answer: "spurs", note: "The hind-leg jab causes pain no drug fully blocks." },
+  { id: "nasty:046", prompt: "Platypuses ooze ____ through their skin.", answer: "milk", note: "They have no nipples; young lap it from the belly." },
+  { id: "nasty:047", prompt: "A male argonaut octopus detaches its ____ to mate.", answer: "arm", alts: ["tentacle"], adult: true, note: "The sperm-filled limb swims off into the female alone." },
+  { id: "nasty:048", prompt: "Some male spiders offer a wrapped ____ to avoid being eaten.", answer: "gift", alts: ["food gift"], note: "A few cheat, wrapping worthless junk in silk." },
+  { id: "nasty:049", prompt: "A clownfish can change from male to ____.", answer: "female", note: "The dominant fish becomes the group's breeding female." },
+  { id: "nasty:050", prompt: "Hippos spin their ____ while pooping to mark territory.", answer: "tail", adult: true, note: "The 'dung shower' flings feces in every direction." },
+  { id: "nasty:051", prompt: "Some snails fire a calcium 'love ____' before mating.", answer: "dart", adult: true, note: "The stabbing dart boosts the shooter's odds of success." },
+  { id: "nasty:052", prompt: "Dolphins have a swiveling, prehensile ____.", answer: "penis", adult: true, note: "It can move and sense objects to steer during mating." },
+];

@@ -1,0 +1,19 @@
+import type { Question } from "../types";
+
+export const questions: Question[] = [
+  { id: "headlines:061", prompt: "A con man in 1925 twice managed to \"sell\" the Paris ____ to scrap-metal dealers.", answer: "Eiffel Tower", alts: ["Eiffel tower", "tower"], note: "Victor Lustig pocketed bribes and skipped town before buyers caught on." },
+  { id: "headlines:062", prompt: "In 1911 the Mona Lisa was stolen from the Louvre by a workman who simply walked out with it hidden under his ____.", answer: "coat", alts: ["smock", "jacket"], note: "The theft is what made the Mona Lisa world-famous." },
+  { id: "headlines:063", prompt: "A French waiter stole over 200 masterpieces just to keep them; when he was caught, the loot was destroyed by his ____.", answer: "mother", alts: ["mom", "mum"], note: "Breitwieser's mother trashed and burned the art to hide his crimes." },
+  { id: "headlines:064", prompt: "For years an insider secretly rigged the McDonald's ____ promotion, funneling millions in top prizes to associates.", answer: "Monopoly", alts: ["monopoly"], note: "The security chief hoarded the winning game pieces himself." },
+  { id: "headlines:065", prompt: "In a foiled 2000 London heist, robbers tried to smash into the Millennium Dome to grab diamonds using a ____.", answer: "JCB digger", alts: ["digger", "bulldozer", "excavator"], note: "Police lay in wait and nabbed the gang mid-raid." },
+  { id: "headlines:066", prompt: "In 2005 thieves in Fortaleza, Brazil, emptied a bank vault after quietly digging a 250-foot ____.", answer: "tunnel", note: "They rented a house and tunneled under the street to the vault." },
+  { id: "headlines:067", prompt: "In the 1960s the CIA spent millions surgically wiring up a live ____ to eavesdrop on the Soviets.", answer: "cat", note: "\"Acoustic Kitty\" reportedly wandered off on its first mission." },
+  { id: "headlines:068", prompt: "During WWII, psychologist B. F. Skinner tried to steer guided missiles using trained ____.", answer: "pigeons", alts: ["pigeon"], note: "\"Project Pigeon\" had birds peck at a target on a screen to steer." },
+  { id: "headlines:069", prompt: "In 1943 British spies fooled Nazi Germany by planting fake invasion plans on a ____.", answer: "corpse", alts: ["dead body", "body"], note: "\"Operation Mincemeat\" dressed a body as an officer and let it wash ashore." },
+  { id: "headlines:070", prompt: "The US military spent much of WWII developing a strange weapon: tiny incendiary bombs strapped to live ____.", answer: "bats", alts: ["bat"], note: "The bat bombs were scrapped after they torched a test airfield." },
+  { id: "headlines:071", prompt: "A 1938 Orson Welles radio drama reportedly spooked some listeners into thinking ____ were invading Earth.", answer: "Martians", alts: ["aliens", "martians"], note: "\"The War of the Worlds\" was styled as breaking news bulletins." },
+  { id: "headlines:072", prompt: "The Soviet military trained ____ to run beneath enemy tanks while carrying explosives.", answer: "dogs", alts: ["dog"], note: "The \"anti-tank dogs\" often ran back toward friendly lines instead." },
+  { id: "headlines:073", prompt: "One American man is famous for holding the record for setting the most ____ world records.", answer: "Guinness", alts: ["guinness"], note: "Ashrita Furman has set hundreds of quirky Guinness records." },
+  { id: "headlines:074", prompt: "An American woman set a record by growing her ____ to a combined length of over 28 feet.", answer: "fingernails", alts: ["nails"], note: "She lost the record-length nails in a car crash years later." },
+  { id: "headlines:075", prompt: "A Montana bar throws an annual festival built around eating deep-fried bull ____.", answer: "testicles", alts: ["balls", "nuts"], note: "\"Rocky Mountain oysters\" are the star dish of the Testicle Festival.", adult: true },
+];

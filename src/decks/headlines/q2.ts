@@ -1,0 +1,19 @@
+import type { Question } from "../types";
+
+export const questions: Question[] = [
+  { id: "headlines:016", prompt: "Tourists in Key West, Florida, blame car crashes and job losses on a supposedly cursed antique ____ named Robert.", answer: "doll", note: "Visitors mail Robert the Doll apology letters begging him to lift curses." },
+  { id: "headlines:017", prompt: "In 1971 a hijacker known as D. B. Cooper collected a $200,000 ransom and vanished by leaping from a jet with a ____.", answer: "parachute", note: "He jumped over the Pacific Northwest and was never found." },
+  { id: "headlines:018", prompt: "In a 1957 April Fools' broadcast, the BBC convinced viewers that Swiss farmers were harvesting ____ from trees.", answer: "spaghetti", note: "Viewers phoned in asking how to grow their own spaghetti tree." },
+  { id: "headlines:019", prompt: "In 1869 an upstate New York farm charged crowds to see a 10-foot \"petrified man\" that was really a carved block of ____.", answer: "gypsum", alts: ["stone", "plaster"], note: "The Cardiff Giant hoax fooled thousands before it was exposed." },
+  { id: "headlines:020", prompt: "In 1835 a New York newspaper boosted sales with fake reports that astronomers had spotted winged ____ living on the moon.", answer: "man-bats", alts: ["bat-men", "batmen", "men"], note: "The \"Great Moon Hoax\" described bat-winged humanoids on the lunar surface." },
+  { id: "headlines:021", prompt: "In 1917 two English girls fooled the world, even Arthur Conan Doyle, with faked photographs of ____.", answer: "fairies", alts: ["fairy"], note: "The Cottingley Fairies were cutouts held up with hatpins." },
+  { id: "headlines:022", prompt: "During the 2010 World Cup, a German aquarium octopus named Paul became a global star for his knack at ____ match results.", answer: "predicting", alts: ["predict", "forecasting"], note: "Paul picked winners by choosing a mussel from flagged boxes." },
+  { id: "headlines:023", prompt: "A struggling Japanese railway appointed a calico ____ named Tama as honorary stationmaster, complete with a tiny cap.", answer: "cat", note: "Tama's fame reversed the line's fortunes; her funeral drew thousands." },
+  { id: "headlines:024", prompt: "Since 2011, 10 Downing Street in London has employed a ____ named Larry with the title Chief Mouser.", answer: "cat", note: "Larry has outlasted several British prime ministers." },
+  { id: "headlines:025", prompt: "In the niche sport of \"extreme ironing,\" enthusiasts lug a board to cliffs and rivers to press their ____.", answer: "laundry", alts: ["clothes", "shirts", "shirt"], note: "People have ironed underwater and mid-parachute jump." },
+  { id: "headlines:026", prompt: "The hybrid sport of chessboxing alternates rounds of boxing with rounds of ____.", answer: "chess", note: "You can win by knockout or by checkmate." },
+  { id: "headlines:027", prompt: "At a world championship held in an English pub, competitors lock feet and try to pin each other's ____.", answer: "toes", alts: ["toe"], note: "Toe wrestling has petitioned (unsuccessfully) for Olympic status." },
+  { id: "headlines:028", prompt: "In a Welsh competition, racers don flippers and a snorkel to thrash through a muddy peat ____.", answer: "bog", alts: ["trench", "ditch"], note: "Bog snorkelling bans normal swimming strokes; you just churn the mud." },
+  { id: "headlines:029", prompt: "In the Spanish village festival of El Colacho, costumed men take a running leap over rows of ____ on mattresses.", answer: "babies", alts: ["baby", "infants"], note: "The centuries-old ritual is meant to cleanse newborns of sin." },
+  { id: "headlines:030", prompt: "Every July 4th on New York's Coney Island, competitors get about 10 minutes to cram down as many ____ as possible.", answer: "hot dogs", alts: ["hotdogs", "hot dog"], note: "Champions have downed over 70 dogs and buns in a single sitting." },
+];

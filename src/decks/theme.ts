@@ -34,6 +34,18 @@ export const DECK_THEME: Record<string, DeckTheme> = {
   acronyms: { tint: "#9CB585", tint2: "#37472C" },
   // deep violet — nocturnal, hushed
   afterdark: { tint: "#8E7BC4", tint2: "#241C3E" },
+  // sandstone — solemn, judicial
+  laws: { tint: "#B79B6E", tint2: "#3A3226" },
+  // newsprint slate — urgent, printed
+  headlines: { tint: "#8AA6BC", tint2: "#1F2A33" },
+  // sickly olive — visceral, gross
+  nasty: { tint: "#8FAE72", tint2: "#233020" },
+  // mauve — baffling, off-kilter
+  wtf: { tint: "#B486A8", tint2: "#2E1F2B" },
+  // caramel — chaotic, warm
+  unhinged: { tint: "#C0925E", tint2: "#2B2118" },
+  // ember red — hot, brazen
+  spicy: { tint: "#D06E76", tint2: "#2A1418" },
 };
 
 export function deckTheme(id: string): DeckTheme {

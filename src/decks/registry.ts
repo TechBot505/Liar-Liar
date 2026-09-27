@@ -8,13 +8,35 @@ import { deck as desi } from "./desi";
 import { deck as movies } from "./movies";
 import { deck as truth } from "./truth";
 import { deck as afterdark } from "./afterdark";
+import { deck as laws } from "./laws";
+import { deck as headlines } from "./headlines";
+import { deck as nasty } from "./nasty";
+import { deck as wtf } from "./wtf";
+import { deck as unhinged } from "./unhinged";
+import { deck as spicy } from "./spicy";
 
 /**
  * Central deck registry. Adding a deck = create `src/decks/<id>/index.ts` exporting `deck`
  * and add one import + one array entry below. Order here is the order shown in the picker.
  * `getDeck`/`listDecks` are the only lookup surface the engine, server and UI use.
  */
-export const DECKS: Deck[] = [facts, truth, words, desi, movies, history, things, acronyms, afterdark];
+export const DECKS: Deck[] = [
+  facts,
+  unhinged,
+  wtf,
+  headlines,
+  laws,
+  truth,
+  nasty,
+  words,
+  desi,
+  movies,
+  history,
+  things,
+  acronyms,
+  afterdark,
+  spicy,
+];
 
 export const DEFAULT_DECK_ID = "facts";
 

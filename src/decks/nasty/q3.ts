@@ -1,0 +1,31 @@
+import type { Question } from "../types";
+
+// The human body -- gross and weird.
+export const questions: Question[] = [
+  { id: "nasty:053", prompt: "Earwax is a form of modified ____.", answer: "sweat", note: "Cerumen comes from glands related to sweat glands." },
+  { id: "nasty:054", prompt: "The bacteria that make feet stink also ripen ____.", answer: "cheese", note: "Brevibacterium linens flavors Limburger and Munster." },
+  { id: "nasty:055", prompt: "Your stomach lining is fully replaced every few ____.", answer: "days", note: "Otherwise its own acid would digest it." },
+  { id: "nasty:056", prompt: "Spread flat, your lungs cover about the size of a ____.", answer: "tennis court", note: "All those tiny air sacs add up hugely." },
+  { id: "nasty:057", prompt: "Humans faintly ____, too dimly for the eye to see.", answer: "glow", note: "We emit visible light 1,000x weaker than we can detect." },
+  { id: "nasty:058", prompt: "The average person passes gas about ____ times a day.", answer: "14", alts: ["10-20"], adult: true, note: "That is up to roughly two liters of gas daily." },
+  { id: "nasty:059", prompt: "Roughly half of your body's cells are not even ____.", answer: "human", note: "Microbes rival your own cells in sheer number." },
+  { id: "nasty:060", prompt: "Your body makes about ____ liters of saliva a day.", answer: "1.5", alts: ["1", "1-2"], note: "That adds up to two large bottles every single day." },
+  { id: "nasty:061", prompt: "You produce around a liter of ____ every day.", answer: "mucus", alts: ["snot"], adult: true, note: "You swallow most of it without ever noticing." },
+  { id: "nasty:062", prompt: "Your feet have about ____ sweat glands.", answer: "250,000", alts: ["250000", "quarter million"], note: "Together they can pump out a cup of sweat a day." },
+  { id: "nasty:063", prompt: "Your brain is roughly ____% fat.", answer: "60", note: "It is the fattiest organ in the whole body." },
+  { id: "nasty:064", prompt: "Your heart pumps about ____ gallons of blood a day.", answer: "2,000", alts: ["2000"], note: "Enough to fill a small backyard pool." },
+  { id: "nasty:065", prompt: "Scientists revived oxygen-starved animals through the ____.", answer: "anus", alts: ["rectum", "butt"], adult: true, note: "Enteral ventilation won an Ig Nobel Prize in 2024." },
+  { id: "nasty:066", prompt: "Nails and hair growing after death is a ____.", answer: "myth", note: "Skin dries and pulls back, only making them look longer." },
+  { id: "nasty:067", prompt: "The appendix may act as a safe house for gut ____.", answer: "bacteria", note: "It can help reboot digestion after an illness." },
+  { id: "nasty:068", prompt: "Sperm is fueled mainly by the sugar ____.", answer: "fructose", adult: true, note: "It gives the cells the energy to swim." },
+  { id: "nasty:069", prompt: "A sneeze's spray cloud can travel up to ____ feet.", answer: "27", note: "An MIT study filmed the gas cloud's surprising reach." },
+  { id: "nasty:070", prompt: "Your small intestine is about ____ feet long.", answer: "20", alts: ["22", "20-23"], note: "It is coiled up tightly to fit inside you." },
+  { id: "nasty:071", prompt: "Newborn babies cannot yet make real ____.", answer: "tears", note: "Their tear ducts are not fully working for weeks." },
+  { id: "nasty:072", prompt: "You shed tens of thousands of skin cells every ____.", answer: "hour", note: "That is close to a million dead skin cells a day." },
+  { id: "nasty:073", prompt: "The strongest muscle for its size is the ____.", answer: "jaw", alts: ["masseter"], note: "The masseter can clench with hundreds of pounds of force." },
+  { id: "nasty:074", prompt: "Your fingerprints first form while you are in the ____.", answer: "womb", note: "Growth and pressure there shape the unique ridges." },
+  { id: "nasty:075", prompt: "You are slightly ____ in the morning than at night.", answer: "taller", note: "Spinal discs compress about a centimeter through the day." },
+  { id: "nasty:076", prompt: "Losing most of your body heat through your head is a ____.", answer: "myth", note: "You lose heat from any bare skin, not mainly the head." },
+  { id: "nasty:077", prompt: "Your tongue print is as unique as your ____.", answer: "fingerprint", alts: ["fingerprints"], note: "No two tongues share the same shape and texture." },
+  { id: "nasty:078", prompt: "Blood makes up about ____% of your body weight.", answer: "8", alts: ["7", "7-8"], note: "For an adult that is roughly five liters." },
+];

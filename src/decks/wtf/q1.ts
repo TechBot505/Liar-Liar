@@ -1,0 +1,27 @@
+import type { Question } from "../types";
+
+export const questions: Question[] = [
+  { id: "wtf:001", prompt: "In the 1960s the CIA spent millions surgically turning a ____ into a spy.", answer: "cat", note: "Project Acoustic Kitty; the wired-up cat ignored orders on its first mission." },
+  { id: "wtf:002", prompt: "During WWII the US military built bombs designed to be carried by live ____.", answer: "bats", alts: ["bat"], note: "Project X-Ray strapped tiny incendiaries to bats to torch Japanese cities." },
+  { id: "wtf:003", prompt: "In WWII the British fooled the Nazis using a ____ carrying fake invasion plans.", answer: "corpse", alts: ["dead body", "body"], note: "Operation Mincemeat planted the body to misdirect the Allied landing in Sicily." },
+  { id: "wtf:004", prompt: "The CIA's Cold War program MKUltra secretly dosed unwitting people with ____.", answer: "LSD", note: "The mind-control research ran through the 1950s and 60s." },
+  { id: "wtf:005", prompt: "For nearly 20 years the US government funded ____ to spy on enemies.", answer: "psychics", alts: ["psychic spies", "remote viewers"], note: "The 'Stargate Project' studied remote viewing from 1978 to 1995." },
+  { id: "wtf:006", prompt: "After WWII the US secretly recruited hundreds of former ____ scientists.", answer: "Nazi", alts: ["German"], note: "Operation Paperclip brought over rocket engineers like Wernher von Braun." },
+  { id: "wtf:007", prompt: "A 1994 US Air Force proposal was a bomb making enemy troops ____ to each other.", answer: "attracted", note: "The so-called 'gay bomb' was never built.", adult: true },
+  { id: "wtf:008", prompt: "The CIA plotted to assassinate Fidel Castro with an exploding ____.", answer: "cigar", note: "It was one of dozens of bizarre failed plots against him." },
+  { id: "wtf:009", prompt: "During WWII Britain planned to build an aircraft carrier out of ____.", answer: "ice", alts: ["ice and wood pulp", "pykrete"], note: "Project Habakkuk's giant ship was never finished." },
+  { id: "wtf:010", prompt: "The first animal to orbit Earth, in 1957, was a ____.", answer: "dog", alts: ["Laika"], note: "Laika the dog flew aboard the Soviet Sputnik 2." },
+  { id: "wtf:011", prompt: "In 1961 the US launched a ____ named Ham into space.", answer: "chimpanzee", alts: ["chimp"], note: "Ham survived and lived for years afterward at zoos." },
+  { id: "wtf:012", prompt: "Nazi scientists sketched a space ____ meant to burn cities from orbit.", answer: "mirror", note: "The 'sun gun' never left the drawing board." },
+  { id: "wtf:013", prompt: "American Charles Osborne hiccuped nonstop for ____ years.", answer: "68", alts: ["sixty-eight"], note: "He started in 1922 and finally stopped in 1990." },
+  { id: "wtf:014", prompt: "US park ranger Roy Sullivan was struck by lightning ____ times and survived.", answer: "seven", alts: ["7"], note: "He was nicknamed the Human Lightning Rod." },
+  { id: "wtf:015", prompt: "Wisconsin's Don Gorske holds the world record for eating the most ____.", answer: "Big Macs", alts: ["Big Mac"], note: "He has eaten one almost every day since 1972." },
+  { id: "wtf:016", prompt: "Australian Graham Barker holds a record for the largest collection of his own ____.", answer: "navel lint", alts: ["belly button lint", "navel fluff"], note: "He has saved it in jars since 1984." },
+  { id: "wtf:017", prompt: "The oldest verified human ever, Jeanne Calment, lived to age ____.", answer: "122", alts: ["one hundred twenty-two"], note: "The French woman died in 1997." },
+  { id: "wtf:018", prompt: "Robert Wadlow, the tallest man ever recorded, stood ____ tall.", answer: "8 ft 11", alts: ["8'11", "2.72 m"], note: "He was still growing when he died in 1940." },
+  { id: "wtf:019", prompt: "An 18th-century Russian woman reportedly gave birth to ____ children.", answer: "69", alts: ["sixty-nine"], note: "The account credits her with 16 pairs of twins." },
+  { id: "wtf:020", prompt: "In 2021 the Austrian village of F***ing renamed itself ____.", answer: "Fugging", note: "Locals were tired of tourists stealing the town sign.", adult: true },
+  { id: "wtf:021", prompt: "Boring, Oregon is officially paired with the town of ____, Scotland.", answer: "Dull", note: "They teamed up 'for the fun of it' in 2012." },
+  { id: "wtf:022", prompt: "There is a small town called Hell in the US state of ____.", answer: "Michigan", note: "It really does freeze over most winters." },
+  { id: "wtf:023", prompt: "The Turkish city of ____ once threatened to sue director Christopher Nolan.", answer: "Batman", note: "The mayor blamed the film franchise for the city's troubles." },
+];

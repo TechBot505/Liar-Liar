@@ -1,0 +1,31 @@
+import type { Question } from "../types";
+
+// Bizarre real medical conditions and syndromes.
+export const questions: Question[] = [
+  { id: "nasty:079", prompt: "Exploding head syndrome is a harmless ____ disorder.", answer: "sleep", note: "You hear a loud bang or crash as you drift off." },
+  { id: "nasty:080", prompt: "Cotard's delusion is the belief that you are ____.", answer: "dead", note: "It is also nicknamed walking corpse syndrome." },
+  { id: "nasty:081", prompt: "Foreign accent syndrome suddenly changes how you ____.", answer: "speak", alts: ["talk"], note: "It usually follows a stroke or brain injury." },
+  { id: "nasty:082", prompt: "Alice in Wonderland syndrome distorts the size of ____.", answer: "objects", note: "The world or your own body seems to shrink or balloon." },
+  { id: "nasty:083", prompt: "Alien hand syndrome makes a ____ act on its own.", answer: "hand", note: "It may unbutton a shirt the other hand just closed." },
+  { id: "nasty:084", prompt: "Fish odor syndrome makes sweat and breath smell of ____.", answer: "fish", note: "The body cannot break down a compound called trimethylamine." },
+  { id: "nasty:085", prompt: "Pica is the compulsion to eat non-food like ____.", answer: "dirt", alts: ["clay", "chalk", "ice"], note: "Cravings can include clay, chalk, paper, or ice." },
+  { id: "nasty:086", prompt: "Hypertrichosis is nicknamed ____ syndrome.", answer: "werewolf", note: "Thick hair can grow across the face and body." },
+  { id: "nasty:087", prompt: "The disease FOP slowly turns muscle into ____.", answer: "bone", note: "A second skeleton forms and locks the body up." },
+  { id: "nasty:088", prompt: "Congenital insensitivity means you cannot feel ____.", answer: "pain", note: "Sufferers may not notice burns or broken bones." },
+  { id: "nasty:089", prompt: "Aquagenic urticaria is a rare allergy to ____.", answer: "water", note: "Even a person's own sweat or tears can trigger hives." },
+  { id: "nasty:090", prompt: "Kleine-Levin syndrome causes episodes of endless ____.", answer: "sleep", note: "Nicknamed Sleeping Beauty syndrome; up to 20 hours a day." },
+  { id: "nasty:091", prompt: "Capgras delusion convinces you loved ones are ____.", answer: "impostors", alts: ["impostor"], note: "Familiar faces feel like identical body-doubles." },
+  { id: "nasty:092", prompt: "Maple syrup urine disease makes ____ smell sweet.", answer: "urine", alts: ["pee"], adult: true, note: "A metabolic disorder often caught right in the diaper." },
+  { id: "nasty:093", prompt: "Methemoglobinemia turned one Kentucky family ____.", answer: "blue", note: "The inherited 'Blue Fugates' had blue-tinged skin." },
+  { id: "nasty:094", prompt: "Prosopagnosia is the inability to recognize ____.", answer: "faces", note: "Also called face blindness; even one's own can baffle." },
+  { id: "nasty:095", prompt: "Progeria makes children age extremely ____.", answer: "fast", alts: ["rapidly"], note: "Bodies show signs of old age within a few years." },
+  { id: "nasty:096", prompt: "Synesthesia can make people ____ colors when they hear sound.", answer: "see", note: "Some also taste words or feel shapes from numbers." },
+  { id: "nasty:097", prompt: "Trichotillomania is the compulsion to pull out ____.", answer: "hair", note: "It can target the scalp, brows, or lashes." },
+  { id: "nasty:098", prompt: "Body integrity dysphoria is the urge to remove a healthy ____.", answer: "limb", note: "Sufferers feel a limb does not belong to them." },
+  { id: "nasty:099", prompt: "Familial dysautonomia sufferers cannot produce ____.", answer: "tears", note: "Overflow tears are largely absent from birth." },
+  { id: "nasty:100", prompt: "Stendhal syndrome is being overwhelmed by great ____.", answer: "art", note: "Racing heart and dizziness before famous masterpieces." },
+  { id: "nasty:101", prompt: "Geographic tongue leaves map-like patches on the ____.", answer: "tongue", note: "Harmless red 'islands' slowly shift shape over time." },
+  { id: "nasty:102", prompt: "One American man hiccupped nonstop for ____ years.", answer: "68", note: "Charles Osborne hiccuped an estimated 430 million times." },
+  { id: "nasty:103", prompt: "Auto-brewery syndrome makes the gut brew ____.", answer: "alcohol", note: "Gut yeast ferments carbs, leaving people 'drunk' while sober." },
+  { id: "nasty:104", prompt: "Xeroderma pigmentosum makes sunlight cause severe ____.", answer: "burns", alts: ["cancer"], note: "'Children of the night' must avoid all UV light." },
+];

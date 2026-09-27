@@ -14,6 +14,12 @@ import { HistoryArt } from "./art/HistoryArt";
 import { ThingsArt } from "./art/ThingsArt";
 import { AcronymsArt } from "./art/AcronymsArt";
 import { AfterdarkArt } from "./art/AfterdarkArt";
+import { LawsArt } from "./art/LawsArt";
+import { HeadlinesArt } from "./art/HeadlinesArt";
+import { NastyArt } from "./art/NastyArt";
+import { WtfArt } from "./art/WtfArt";
+import { UnhingedArt } from "./art/UnhingedArt";
+import { SpicyArt } from "./art/SpicyArt";
 
 const ART: Record<string, FC<ArtProps>> = {
   facts: FactsArt,
@@ -25,6 +31,12 @@ const ART: Record<string, FC<ArtProps>> = {
   things: ThingsArt,
   acronyms: AcronymsArt,
   afterdark: AfterdarkArt,
+  laws: LawsArt,
+  headlines: HeadlinesArt,
+  nasty: NastyArt,
+  wtf: WtfArt,
+  unhinged: UnhingedArt,
+  spicy: SpicyArt,
 };
 
 const SIZE_CLASS: Record<DeckArtSize, string> = {

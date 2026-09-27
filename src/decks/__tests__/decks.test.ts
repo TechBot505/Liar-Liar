@@ -39,4 +39,37 @@ describe("deck content", () => {
       });
     });
   }
+
+  // Cross-deck integrity: prompts must be globally unique, and no fact question
+  // may repeat another fact question's answer+prompt pair in a different deck.
+  const norm = (s: string): string => s.trim().toLowerCase().replace(/\s+/g, " ");
+
+  it("has no duplicate normalized prompt across all decks", () => {
+    const seen = new Map<string, string>();
+    const dupes: string[] = [];
+    for (const deck of DECKS) {
+      for (const q of deck.questions) {
+        const key = norm(q.prompt);
+        const prev = seen.get(key);
+        if (prev) dupes.push(`${q.id} duplicates ${prev}: "${q.prompt}"`);
+        else seen.set(key, q.id);
+      }
+    }
+    expect(dupes, dupes.join("\n")).toHaveLength(0);
+  });
+
+  it("has no duplicate answer+prompt across fact decks", () => {
+    const seen = new Map<string, string>();
+    const dupes: string[] = [];
+    for (const deck of DECKS) {
+      if (deck.kind !== "fact") continue;
+      for (const q of deck.questions) {
+        const key = `${norm(q.answer)}||${norm(q.prompt)}`;
+        const prev = seen.get(key);
+        if (prev) dupes.push(`${q.id} duplicates ${prev}`);
+        else seen.set(key, q.id);
+      }
+    }
+    expect(dupes, dupes.join("\n")).toHaveLength(0);
+  });
 });

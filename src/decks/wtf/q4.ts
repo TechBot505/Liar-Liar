@@ -1,0 +1,27 @@
+import type { Question } from "../types";
+
+export const questions: Question[] = [
+  { id: "wtf:069", prompt: "In 1992 Pepsi flopped with a clear, caffeine-free cola called ____ Pepsi.", answer: "Crystal", note: "The see-through soda vanished within about a year." },
+  { id: "wtf:070", prompt: "In the 1980s toothpaste brand ____ tried selling frozen TV dinners.", answer: "Colgate", note: "Diners weren't hungry for toothpaste-brand food." },
+  { id: "wtf:071", prompt: "In 2000 Heinz sold ketchup in the shocking color ____.", answer: "green", alts: ["purple", "blue"], note: "The EZ Squirt line briefly came in wild colors." },
+  { id: "wtf:072", prompt: "Motorcycle brand ____ once flopped with its own perfume and cologne.", answer: "Harley-Davidson", alts: ["Harley"], note: "Bikers didn't want to smell like a department store." },
+  { id: "wtf:073", prompt: "Pen maker ____ once failed at selling disposable underwear.", answer: "Bic", note: "The throwaway-pen logic didn't work for briefs." },
+  { id: "wtf:074", prompt: "A 1990s company sold flavored bottled ____ made just for dogs and cats.", answer: "water", note: "Thirsty Dog! came in a beef flavor for pets." },
+  { id: "wtf:075", prompt: "Women's magazine ____ launched a yogurt line that quickly failed.", answer: "Cosmopolitan", note: "The branded dairy line was pulled after about 18 months." },
+  { id: "wtf:076", prompt: "At Cooper's Hill, England, people chase a rolling wheel of ____ downhill.", answer: "cheese", note: "Racers tumble down a near-vertical slope after it." },
+  { id: "wtf:077", prompt: "Fruita, Colorado holds a festival for Mike, a ____ that lived 18 months.", answer: "headless chicken", alts: ["chicken"], note: "The rooster survived after a botched beheading in 1945." },
+  { id: "wtf:078", prompt: "The Spanish town of Bunol hosts a giant ____ fight every August.", answer: "tomato", alts: ["tomatoes"], note: "Tens of thousands hurl overripe tomatoes at La Tomatina." },
+  { id: "wtf:079", prompt: "Finland's Wife Carrying Championship pays the winner the wife's weight in ____.", answer: "beer", note: "The sport may trace to old bride-stealing tales." },
+  { id: "wtf:080", prompt: "England hosts an annual world championship in ____ wrestling.", answer: "toe", note: "Bare feet lock and each player tries to pin the other." },
+  { id: "wtf:081", prompt: "In Spain's El Colacho festival, men dressed as devils jump over rows of ____.", answer: "babies", note: "Infants are laid on mattresses for the leap." },
+  { id: "wtf:082", prompt: "The Italian town of Ivrea holds an annual ____ fight each winter.", answer: "oranges", alts: ["orange"], note: "Teams pelt each other in a re-enacted revolt." },
+  { id: "wtf:083", prompt: "Finland hosts the annual World ____ Championships.", answer: "Air Guitar", note: "Players mime rock solos to win the global title." },
+  { id: "wtf:084", prompt: "In England's gurning contests, competitors compete at pulling ____.", answer: "faces", alts: ["face"], note: "Framing your head through a horse collar helps." },
+  { id: "wtf:085", prompt: "Lopburi, Thailand throws an annual buffet feast for wild ____.", answer: "monkeys", note: "Tables are piled high with fruit for the macaques." },
+  { id: "wtf:086", prompt: "In Wales, competitors race through a muddy ____ wearing snorkels.", answer: "bog", alts: ["peat bog"], note: "Bog snorkellers can't use a normal swimming stroke." },
+  { id: "wtf:087", prompt: "England's Cotswold Olimpicks feature a contest of ____ kicking.", answer: "shin", note: "Padding your trousers with straw is allowed." },
+  { id: "wtf:088", prompt: "In Bavaria, the sport of Fingerhakeln has two men pull with one ____.", answer: "finger", note: "The hooked finger drags the loser across a table." },
+  { id: "wtf:089", prompt: "There is a competitive sport combining an extreme location with ____.", answer: "ironing", note: "People iron shirts up cliffs and even underwater." },
+  { id: "wtf:090", prompt: "A hybrid sport alternates rounds of boxing with rounds of ____.", answer: "chess", note: "You can win chess boxing by knockout or by checkmate." },
+  { id: "wtf:091", prompt: "Marlinton, West Virginia hosts an annual ____ Cook-Off.", answer: "Roadkill", note: "Cooks turn legally salvaged critters into chili." },
+];
