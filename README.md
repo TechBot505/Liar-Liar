@@ -5,7 +5,7 @@ Everyone gets the same prompt, writes a convincing lie, then hunts for the truth
 friends and spot the truth to score.
 
 - **Web**: Next.js 15 (App Router) → deploys to Vercel
-- **Realtime**: PartyKit (`party/server.ts`, one room = one game) → deploys with `partykit deploy`
+- **Realtime**: [partyserver](https://github.com/cloudflare/partykit) on Cloudflare Workers (`party/index.ts`, one Durable Object room = one game) → deploys with `wrangler deploy` (Workers Free plan; `*.workers.dev`)
 - **DB (optional)**: Drizzle + Postgres (Neon)
 - **Auth (optional)**: Clerk
 
@@ -19,8 +19,8 @@ npm install
 npm run dev
 ```
 
-Runs both servers via `concurrently`: web on http://localhost:3000 and PartyKit on
-:1999. No env vars needed. Quality gates:
+Runs both servers via `concurrently`: web on http://localhost:3000 and the
+`wrangler dev` worker on :1999. No env vars needed. Quality gates:
 
 ```bash
 npm run typecheck   # tsc for app + party
@@ -43,7 +43,7 @@ npm run db:local      # starts PGlite on 127.0.0.1:5432 (fallback 54329),
 DATABASE_URL="postgres://postgres:postgres@127.0.0.1:5432/postgres" npm run db:migrate
 ```
 
-Or run everything at once — local DB + web (wired to it) + PartyKit:
+Or run everything at once — local DB + web (wired to it) + the worker:
 
 ```bash
 npm run dev:full
@@ -54,26 +54,30 @@ local PGlite DB and production Neon (it runs the SQL in `drizzle/` and records w
 it applied, so it is safe to re-run). Production simply points `DATABASE_URL` at a
 Neon connection string instead — see step 3.
 
-## 2. Deploy the realtime server (PartyKit)
+## 2. Deploy the realtime server (Cloudflare Workers)
+
+Local `wrangler dev` needs no account. To deploy you need a (free) Cloudflare
+account:
 
 ```bash
-npx partykit login
-npx partykit deploy
-# set the secrets the party server reads via room.env:
-npx partykit env add PARTY_SECRET       # same value you set on Vercel
-npx partykit env add NEXT_PUBLIC_APP_URL # your Vercel URL, e.g. https://liarliar.vercel.app
+npx wrangler login
+npx wrangler deploy
+# secrets/vars the worker reads via env:
+npx wrangler secret put PARTY_SECRET          # same value you set on Vercel
+# NEXT_PUBLIC_APP_URL: set it in wrangler.jsonc `vars`, or as a secret:
+npx wrangler secret put NEXT_PUBLIC_APP_URL   # your Vercel URL, e.g. https://liarliar.vercel.app
 ```
 
-Your deployed host looks like `liarliar.<username>.partykit.dev` — use it as
+Your deployed host looks like `liarliar.<your-subdomain>.workers.dev` — use it as
 `NEXT_PUBLIC_PARTYKIT_HOST` on Vercel.
 
 ## 3. Deploy the web app (Vercel)
 
 1. Import the repo in Vercel (framework auto-detected; build command stays `next build`).
 2. Set env vars (see `.env.example` for the full list with comments):
-   - `NEXT_PUBLIC_PARTYKIT_HOST` — your PartyKit host
+   - `NEXT_PUBLIC_PARTYKIT_HOST` — your Workers host (`liarliar.<subdomain>.workers.dev`)
    - `NEXT_PUBLIC_APP_URL` — your Vercel URL
-   - `PARTY_SECRET` — matches the PartyKit value
+   - `PARTY_SECRET` — matches the worker value
    - `DATABASE_URL` — Neon **pooled** connection string (optional; enables cloud history)
    - Clerk keys (optional; see step 4)
 3. Provision Postgres (Neon): create a project at [neon.tech](https://neon.tech)
@@ -93,7 +97,7 @@ and the app falls back to local history — nothing breaks.
 2. Copy the API keys and set **both** `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` and
    `CLERK_SECRET_KEY` in Vercel and `.env.local` (both required — if either is
    missing, auth stays off and sign-in is hidden). Clerk keys are **not** needed on
-   the PartyKit server.
+   the worker.
 3. Add your web origin to Clerk's allowed origins. The sign-in/up pages live at
    `/sign-in` and `/sign-up`; `NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL`
    (default `/play`) controls where users land afterward.
@@ -105,7 +109,7 @@ and the app falls back to local history — nothing breaks.
 ## 5. Architecture
 
 ```
-party/server.ts     Thin PartyKit adapter → the pure engine in src/game/
+party/index.ts      Cloudflare Worker: routePartykitRequest + the partyserver Server (Durable Object) → the pure engine in src/game/
 src/game/           Pure shared TS: types, protocol (zod), engine, scoring, awards, matching
 src/decks/          Deck registry + one folder per deck (question data)
 src/lib/db/         Drizzle schema + lazy getDb() (null when DATABASE_URL unset)
@@ -113,7 +117,7 @@ src/lib/server/     env helpers, auth (getUserId), rate limiter, hashing, valida
 src/app/api/        games, history, history/claim, profile, stats, health
 ```
 
-Data flow: the browser talks to the PartyKit room over WebSocket. When a game ends the
+Data flow: the browser talks to the Durable Object room over WebSocket. When a game ends the
 party server POSTs a `GameRecord` to `${NEXT_PUBLIC_APP_URL}/api/games` (authenticated with
 `x-party-secret`), storing each seat with a `sha256(token)`. A signed-in user calls
 `POST /api/history/claim` with their local tokens to attach those seats to their account;

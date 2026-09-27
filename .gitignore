@@ -38,8 +38,13 @@ yarn-error.log*
 # vercel
 .vercel
 
-# partykit local state
+# partykit local state (legacy)
 .partykit
+
+# cloudflare wrangler local state + local dev secrets
+.wrangler
+.dev.vars
+!.dev.vars.example
 
 # local dev database (PGlite persisted store — npm run db:local)
 .pglite

@@ -16,5 +16,5 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["server.ts"]
+  "include": ["index.ts"]
 }

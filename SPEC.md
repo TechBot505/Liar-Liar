@@ -11,7 +11,7 @@ playful stickers, springy motion, confetti, haptics. Must look amazing on a phon
 ## Stack
 - Next.js 15 (App Router, `src/`, TS strict), React 19, Tailwind CSS v4 (CSS-first), `motion` (import `motion/react`),
   `lucide-react`, `zustand`, `zod`, `clsx`, `tailwind-merge`, `canvas-confetti`, `qrcode`, `nanoid`.
-- Realtime: **PartyKit** (`partykit` dev dep + `partysocket` client). Server code in `party/`. One PartyKit room = one game.
+- Realtime: **partyserver** on Cloudflare Workers (`partyserver` + dev `wrangler`; `partysocket` client). Server code in `party/index.ts`. One Durable Object room = one game. Deployable to `*.workers.dev` on the Workers Free plan (SQLite-backed DOs).
 - DB: Drizzle ORM + `postgres` (postgres-js, `prepare:false`) → works with Neon. Optional (`DATABASE_URL`).
 - Auth: Clerk (`@clerk/nextjs`) — OPTIONAL. App fully works with zero env vars (guest play). Login only adds cloud
   profile + play history.
@@ -19,15 +19,15 @@ playful stickers, springy motion, confetti, haptics. Must look amazing on a phon
 - Fonts (next/font/google): display "Bricolage Grotesque" or similar chunky variable font; body "Inter"/"Plus Jakarta Sans".
 
 ## Zero-config & ports
-- `npm run dev` runs BOTH Next (3000) and PartyKit (1999) via `concurrently`.
-- `NEXT_PUBLIC_PARTYKIT_HOST` default `localhost:1999` (prod: `liarliar.<user>.partykit.dev`).
+- `npm run dev` runs BOTH Next (3000) and the `wrangler dev` worker (1999) via `concurrently`.
+- `NEXT_PUBLIC_PARTYKIT_HOST` default `localhost:1999` (prod: `liarliar.<subdomain>.workers.dev`).
 - `src/lib/env.ts`: `isAuthEnabled` (both Clerk keys), `isDbEnabled` (DATABASE_URL). Without them everything
-  degrades gracefully (history stored locally). Deployable: Next → Vercel/Netlify; `party/` → `npx partykit deploy`.
+  degrades gracefully (history stored locally). Deployable: Next → Vercel/Netlify; `party/` → `npx wrangler deploy`.
 
 ## Directory ownership
 ```
-party/server.ts              PartyKit Server class (thin: wires connections/timers to the pure engine)
-partykit.json
+party/index.ts               Cloudflare Worker: routePartykitRequest fetch handler + partyserver Server class (thin: wires connections/alarms to the pure engine)
+wrangler.jsonc               worker config (DO binding "main" → LiarLiarServer, SQLite migration)
 src/game/                    PURE shared TS (no DOM, no Node APIs): types.ts, protocol.ts (zod messages),
                              engine.ts (reducer), scoring.ts, awards.ts, match.ts (fuzzy truth match),
                              select.ts (question selection), profanity.ts, codes.ts, rng.ts, bots? (no)

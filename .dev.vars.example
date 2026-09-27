@@ -1,0 +1,8 @@
+# Local-only secrets for `wrangler dev` (git-ignored copy: .dev.vars).
+# Copy this file to .dev.vars and fill in real values.
+
+# Shared secret authenticating the party server -> /api/games POST.
+PARTY_SECRET=
+
+# Public origin of the Next.js app the party server POSTs finished games to.
+NEXT_PUBLIC_APP_URL=http://localhost:3000

@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "liarliar",
+  "main": "party/index.ts",
+  "compatibility_date": "2025-09-01",
+  "observability": { "enabled": true },
+  // Durable Object hosting the realtime game room. Binding name "main" keeps the
+  // client route as /parties/main/<code> (routePartykitRequest kebab-cases the
+  // binding name).
+  "durable_objects": {
+    "bindings": [
+      { "name": "main", "class_name": "LiarLiarServer" }
+    ]
+  },
+  // SQLite-backed Durable Objects are available on the Workers Free plan.
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["LiarLiarServer"] }
+  ],
+  // Public app origin the server POSTs finished games to. Empty by default;
+  // override per-environment (wrangler.jsonc vars or `wrangler secret put`).
+  // PARTY_SECRET is intentionally NOT here — set it via `wrangler secret put`.
+  "vars": {
+    "NEXT_PUBLIC_APP_URL": ""
+  }
+}
