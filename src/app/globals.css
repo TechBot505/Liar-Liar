@@ -1,26 +1,70 @@
 @import "tailwindcss";
+@import "../styles/base.css";
+@import "../styles/utilities.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/*
+ * Liar Liar design tokens — a single, calm, editorial-minimal dark theme.
+ * Near-black canvas, layered surfaces, hairline borders, ONE coral accent.
+ * @theme inline so font tokens resolve the next/font CSS variables on <html>.
+ */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* ---- Canvas & surfaces ---- */
+  --color-bg: #0a0a0b;
+  --color-surface: #131316;
+  --color-surface-2: #1a1a1f;
+  --color-line: rgba(255, 255, 255, 0.08);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  /* ---- Text ---- */
+  --color-fg: #f5f5f4;
+  --color-fg-muted: #b4b4bd; /* secondary text — ~9.6:1 on bg */
+  --color-fg-faint: #7a7a85; /* tertiary text — ~4.7:1 on bg (WCAG AA) */
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* ---- Accent (the "liar" color) + semantics ---- */
+  --color-accent: #ff5a4e;
+  --color-accent-fg: #0a0a0b; /* near-black text on coral — AA (~6:1) */
+  --color-truth: #4ade80; /* correct / truth, results only */
+
+  /* ---- Radii ---- */
+  --radius-input: 12px;
+  --radius-card: 14px;
+  --radius-pill: 9999px;
+
+  /* ---- Shadows (very soft, layered) ---- */
+  --shadow-soft: inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-raise: inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 4px 12px rgba(0, 0, 0, 0.3);
+
+  /* ---- Fonts (next/font sets the vars on <html>) ---- */
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", monospace;
+
+  /* ---- Motion ---- */
+  --ease-pop: cubic-bezier(0.34, 1.4, 0.64, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* =====================================================================
+   * DEPRECATED ALIASES — remove after every page is restyled.
+   * Old candy tokens/classes map onto the neutral system so existing pages
+   * keep compiling and stay legible until an agent restyles them.
+   * ===================================================================== */
+  --color-ink: #0a0a0b; /* → bg */
+  --color-ink-2: #131316; /* → surface */
+  --color-card: #1a1a1f; /* → surface-2 */
+  --color-cream: #f5f5f4; /* → fg */
+  --color-yellow: #ff5a4e; /* → accent (was primary) */
+  --color-pink: #ff5a4e; /* → accent */
+  --color-red: #ff5a4e; /* → accent (danger) */
+  --color-lime: #4ade80; /* → truth */
+  --color-cyan: #a1a1aa; /* → fg-muted */
+  --color-violet: #1a1a1f; /* → surface-2 */
+  --radius-xl: 12px; /* → input */
+  --radius-2xl: 14px; /* → card */
+  --radius-sticker: 14px; /* → card */
+  --shadow-sticker: var(--shadow-soft);
+  --shadow-sticker-lg: var(--shadow-soft);
+  --shadow-pop: var(--shadow-soft);
+  --font-display: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
 }

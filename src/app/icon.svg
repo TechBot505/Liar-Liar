@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="120" fill="#0A0A0B"/>
+  <rect x="0.5" y="0.5" width="511" height="511" rx="119.5" fill="none" stroke="rgba(255,255,255,0.08)"/>
+  <!-- Serif "L" monogram in coral — the "Liar" mark. -->
+  <g fill="#FF5A4E">
+    <rect x="170" y="150" width="92" height="18" rx="6"/>
+    <rect x="190" y="150" width="52" height="182" rx="6"/>
+    <rect x="190" y="306" width="152" height="52" rx="6"/>
+  </g>
+  <!-- Caret-like blank: the fill-in-the-lie cursor. -->
+  <rect x="360" y="150" width="14" height="120" rx="7" fill="#FF5A4E" opacity="0.9"/>
+</svg>

@@ -1,0 +1,200 @@
+/* Reusable design-system utilities. Kept in @layer utilities so Tailwind
+   classes can still override them where needed. */
+@layer utilities {
+  /* Display type: tight tracking, generous leading — no chunky candy weight. */
+  .text-display {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+
+  /* Expressive serif for rare display moments (logo "Liar", verdict lines). */
+  .text-serif {
+    font-family: var(--font-serif);
+    font-style: italic;
+    letter-spacing: -0.01em;
+  }
+
+  /* Tabular monospace for codes / timers / numbers. */
+  .text-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* DEPRECATED alias: ".sticker" was a 3px ink outline + hard offset shadow.
+     Now a hairline surface card. Kept so un-restyled pages stay legible. */
+  .sticker {
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-soft);
+  }
+  /* DEPRECATED: tilt is gone in the new system — no-op. */
+  .sticker-tilt {
+    transform: none;
+  }
+
+  /* DEPRECATED alias: ".btn-3d" was a glossy 3D press. Now a flat hairline
+     surface with a soft press darken. */
+  .btn-3d {
+    position: relative;
+    border: 1px solid var(--color-line);
+    box-shadow: var(--shadow-soft);
+    transition: filter 0.15s var(--ease-out), transform 0.15s var(--ease-out);
+  }
+  .btn-3d:active {
+    transform: scale(0.97);
+    filter: brightness(0.92);
+  }
+  .btn-3d:disabled {
+    filter: saturate(0.6) brightness(0.8);
+    cursor: not-allowed;
+  }
+
+  /* Frosted panel — overlays / sheets. */
+  .glass {
+    background: color-mix(in srgb, var(--color-surface) 82%, transparent);
+    backdrop-filter: blur(16px) saturate(1.1);
+    -webkit-backdrop-filter: blur(16px) saturate(1.1);
+    border: 1px solid var(--color-line);
+  }
+
+  /* Very faint film-grain overlay (attach to a fixed pointer-events-none layer). */
+  .grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.03;
+  }
+
+  /*
+   * Safe-area helpers for notches / home indicators. Each uses
+   * max(base, inset), where the base comes from an optional --pad-top, --pad-bottom
+   * or --pad-x variable. Do not combine them with Tailwind padding utilities on the
+   * same element (they would override each other); set the base via the variable,
+   * e.g. class "safe-bottom [--pad-bottom:12px]", or use px-[max(16px,env(...))].
+   */
+  .safe-top {
+    padding-top: max(var(--pad-top, 0px), env(safe-area-inset-top, 0px));
+  }
+  .safe-bottom {
+    padding-bottom: max(var(--pad-bottom, 0px), env(safe-area-inset-bottom, 0px));
+  }
+  .safe-x {
+    padding-left: max(var(--pad-x, 0px), env(safe-area-inset-left, 0px));
+    padding-right: max(var(--pad-x, 0px), env(safe-area-inset-right, 0px));
+  }
+
+  .no-tap-highlight {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Hide scrollbars on horizontal option rows while keeping scroll. */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Full dynamic-viewport stage used by the app shell. */
+  .stage {
+    min-height: 100dvh;
+  }
+
+  /* Gentle idle bob for avatars. */
+  @keyframes ll-bob {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5%);
+    }
+  }
+  .animate-bob {
+    animation: ll-bob 3s var(--ease-out) infinite;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * Deck art — generative SVG/CSS identities. Shared keyframes (transform/opacity
+ * only, GPU-friendly). Elements opt in with the `.dart` class so the wrapper can
+ * pause everything when off-screen (data-play="false"). prefers-reduced-motion is
+ * already neutralised globally in base.css.
+ * ------------------------------------------------------------------------- */
+@layer utilities {
+  .deck-art {
+    content-visibility: auto;
+    contain-intrinsic-size: 160px;
+  }
+  .deck-art[data-play="false"] .dart {
+    animation-play-state: paused !important;
+  }
+  .dart {
+    transform-box: fill-box;
+    transform-origin: center;
+    will-change: transform, opacity;
+  }
+
+  @keyframes dart-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes dart-spin-rev {
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  @keyframes dart-scroll-y {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-50%);
+    }
+  }
+  @keyframes dart-parallax {
+    0%,
+    100% {
+      transform: translateX(-4px);
+    }
+    50% {
+      transform: translateX(4px);
+    }
+  }
+  @keyframes dart-sweep {
+    0% {
+      transform: translateX(-140%);
+    }
+    100% {
+      transform: translateX(160%);
+    }
+  }
+  @keyframes dart-morph {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  @keyframes dart-twinkle {
+    0%,
+    100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  @keyframes dart-float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+}

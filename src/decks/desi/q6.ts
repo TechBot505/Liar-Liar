@@ -1,0 +1,30 @@
+import type { Question } from "../types";
+
+// Languages, symbols & culture
+export const q6: Question[] = [
+  { id: "desi:102", prompt: "India's constitution lists 22 official languages in its ____ Schedule.", answer: "Eighth", alts: ["8th"], note: "The list has grown over the decades." },
+  { id: "desi:103", prompt: "The most widely spoken language in India is ____.", answer: "Hindi", note: "It is written in the Devanagari script." },
+  { id: "desi:104", prompt: "Hindi and Sanskrit are both written in the ____ script.", answer: "Devanagari", note: "The script is read left to right." },
+  { id: "desi:105", prompt: "India's national bird is the ____.", answer: "peacock", alts: ["Indian peafowl", "peafowl"], note: "The Indian peafowl was chosen for its beauty and cultural role." },
+  { id: "desi:106", prompt: "India's national animal is the ____.", answer: "tiger", alts: ["Bengal tiger"], note: "The Bengal tiger is the country's chief conservation symbol." },
+  { id: "desi:107", prompt: "India's designated national aquatic animal is the Ganges river ____.", answer: "dolphin", note: "This freshwater dolphin is nearly blind and echolocates." },
+  { id: "desi:108", prompt: "The festival of lights celebrated widely across India is ____.", answer: "Diwali", alts: ["Deepavali"], note: "Homes are lit with rows of small oil lamps." },
+  { id: "desi:109", prompt: "Holi is popularly known as the festival of ____.", answer: "colours", alts: ["colors", "color", "colour"], note: "Revellers smear and throw bright powders." },
+  { id: "desi:110", prompt: "Sanskrit is one of the world's oldest classical languages of ____.", answer: "India", note: "Much ancient Indian literature was composed in it." },
+  { id: "desi:111", prompt: "Legendary playback singer Lata Mangeshkar recorded in many Indian ____.", answer: "languages", note: "Her career spanned many decades of film music." },
+  { id: "desi:112", prompt: "Kerala's scenic network of lagoons and canals is famous as its ____.", answer: "backwaters", note: "Houseboats cruise the palm-lined channels." },
+  { id: "desi:113", prompt: "The Andaman and Nicobar Islands lie in the ____ of Bengal.", answer: "Bay", note: "They are far to the east of the mainland." },
+  { id: "desi:114", prompt: "Wular Lake, one of Asia's largest freshwater lakes, lies in ____.", answer: "Kashmir", alts: ["Jammu and Kashmir"], note: "It is fed by the Jhelum river." },
+  { id: "desi:115", prompt: "India's longest river, sacred to many, is the ____.", answer: "Ganga", alts: ["Ganges"], note: "It flows from the Himalayas to the Bay of Bengal." },
+  { id: "desi:116", prompt: "The Brihadeeswarar temple, built by the Cholas, is famed for its towering ____.", answer: "tower", alts: ["gopuram", "vimana"], note: "Its main tower was an engineering marvel of its age." },
+  { id: "desi:117", prompt: "The desert city of Jaisalmer is nicknamed the ____ City for its sandstone.", answer: "Golden", note: "Its fort glows amber in the desert sun." },
+  { id: "desi:118", prompt: "Cherrapunji, among Earth's rainiest places, sits in the state of ____.", answer: "Meghalaya", note: "Its name means 'abode of the clouds'." },
+  { id: "desi:119", prompt: "The Western and Eastern Ghats are two mountain ranges running along India's ____.", answer: "coasts", alts: ["coast", "peninsula"], note: "They frame the Deccan Plateau." },
+  { id: "desi:120", prompt: "Kaziranga National Park in Assam protects most of the world's one-horned ____.", answer: "rhinoceros", alts: ["rhino", "rhinos", "rhinoceroses"], note: "The park is a UNESCO World Heritage Site." },
+  { id: "desi:121", prompt: "Gir National Park in Gujarat is the last wild home of the Asiatic ____.", answer: "lion", alts: ["lions"], note: "It is the only place these lions survive in the wild." },
+  { id: "desi:122", prompt: "The Hampi ruins in Karnataka were once capital of the mighty ____ Empire.", answer: "Vijayanagara", alts: ["Vijayanagar"], note: "Its boulder-strewn ruins are a World Heritage Site." },
+  { id: "desi:123", prompt: "Meghalaya's name literally means the abode of the ____.", answer: "clouds", note: "It reflects the region's heavy monsoon mists." },
+  { id: "desi:124", prompt: "The Ajanta and Ellora caves in Maharashtra are famed for rock-cut ____.", answer: "temples", alts: ["caves", "sculptures", "art"], note: "They were carved directly into cliff faces." },
+  { id: "desi:125", prompt: "The traditional Indian medicine system with ancient roots is called ____.", answer: "Ayurveda", note: "It emphasises diet, herbs and lifestyle balance." },
+  { id: "desi:126", prompt: "The Nilgiri Mountain Railway, a UNESCO site, climbs to the hill town of ____.", answer: "Ooty", alts: ["Udhagamandalam", "Udagamandalam"], note: "The rack railway winds up through tea country." },
+];
