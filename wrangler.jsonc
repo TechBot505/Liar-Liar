@@ -20,6 +20,6 @@
   // override per-environment (wrangler.jsonc vars or `wrangler secret put`).
   // PARTY_SECRET is intentionally NOT here — set it via `wrangler secret put`.
   "vars": {
-    "NEXT_PUBLIC_APP_URL": ""
+    "NEXT_PUBLIC_APP_URL": "https://liar-liar-play.vercel.app"
   }
 }
