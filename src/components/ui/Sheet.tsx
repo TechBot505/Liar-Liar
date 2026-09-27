@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, type JSX, type ReactNode } from "react";
-import { AnimatePresence, motion, type PanInfo } from "motion/react";
+import { AnimatePresence, motion, useDragControls, type PanInfo } from "motion/react";
 import { cn } from "@/lib/cn";
 
 export interface SheetProps {
@@ -10,14 +10,20 @@ export interface SheetProps {
   children: ReactNode;
   title?: string;
   className?: string;
+  /** Optional pinned footer (e.g. the primary action) that stays visible while content scrolls. */
+  footer?: ReactNode;
 }
 
 const FOCUSABLE =
   'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
 
 /** Bottom sheet on mobile (drag down to dismiss), centered dialog on desktop. */
-export function Sheet({ open, onClose, children, title, className }: SheetProps): JSX.Element {
+export function Sheet({ open, onClose, children, title, className, footer }: SheetProps): JSX.Element {
   const panelRef = useRef<HTMLDivElement>(null);
+  // Drag-to-dismiss is started ONLY from the grabber/header (dragListener=false below).
+  // Letting the whole panel listen for drags swallowed touch gestures and blocked
+  // native scrolling of long content on mobile.
+  const dragControls = useDragControls();
   const restoreRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
@@ -74,6 +80,8 @@ export function Sheet({ open, onClose, children, title, className }: SheetProps)
             aria-modal="true"
             aria-label={title}
             drag="y"
+            dragListener={false}
+            dragControls={dragControls}
             dragConstraints={{ top: 0, bottom: 0 }}
             dragElastic={{ top: 0, bottom: 0.6 }}
             onDragEnd={onDragEnd}
@@ -82,14 +90,25 @@ export function Sheet({ open, onClose, children, title, className }: SheetProps)
             exit={{ y: "100%" }}
             transition={{ type: "spring", stiffness: 400, damping: 34 }}
             className={cn(
-              "safe-bottom relative z-10 w-full max-w-md rounded-t-[20px] border-t border-line bg-surface p-5 [--pad-bottom:20px]",
+              "safe-bottom relative z-10 flex max-h-[90dvh] overflow-hidden w-full max-w-md flex-col rounded-t-[20px] border-t border-line bg-surface [--pad-bottom:20px]",
               "shadow-soft sm:rounded-[20px] sm:border",
               className,
             )}
           >
-            <div className="mx-auto mb-4 h-1 w-9 rounded-full bg-fg-faint/60 sm:hidden" aria-hidden />
-            {title && <h2 className="text-display mb-3 text-xl text-fg">{title}</h2>}
-            {children}
+            <div
+              className="shrink-0 cursor-grab touch-none px-5 pt-3 active:cursor-grabbing"
+              onPointerDown={(e) => dragControls.start(e)}
+            >
+              <div className="mx-auto mb-4 h-1 w-9 rounded-full bg-fg-faint/60 sm:hidden" aria-hidden />
+              {title && <h2 className="text-display mb-3 text-xl text-fg">{title}</h2>}
+            </div>
+            <div
+              data-sheet-scroll
+              className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain px-5 pb-5 [-webkit-overflow-scrolling:touch]"
+            >
+              {children}
+            </div>
+            {footer && <div className="shrink-0 border-t border-line px-5 pt-4">{footer}</div>}
           </motion.div>
         </div>
       )}

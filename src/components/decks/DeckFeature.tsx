@@ -49,8 +49,13 @@ export function DeckFeature({ deck }: { deck: Deck }): JSX.Element {
           <span className="text-mono text-[0.7rem] uppercase tracking-wide text-fg-faint">
             {deck.questions.length} prompts · answers hidden
           </span>
-          <Button size="sm" onClick={() => router.push(`/play?create=${deck.id}`)}>
-            <Play size={16} aria-hidden /> Play this deck
+          <Button
+            size="sm"
+            className="shrink-0"
+            aria-label={`Play ${deck.name}`}
+            onClick={() => router.push(`/play?create=${deck.id}`)}
+          >
+            <Play size={16} aria-hidden /> Play
           </Button>
         </div>
       </div>

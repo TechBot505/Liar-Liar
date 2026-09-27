@@ -63,7 +63,16 @@ export function CreateGameSheet({ open, onClose, initialDeckId }: CreateGameShee
   };
 
   return (
-    <Sheet open={open} onClose={onClose} title="Create a game" className="max-h-[88dvh] overflow-y-auto">
+    <Sheet
+      open={open}
+      onClose={onClose}
+      title="Create a game"
+      footer={
+        <Button size="lg" fullWidth loading={loading} onClick={create}>
+          {loading ? "Creating room…" : "Create room"}
+        </Button>
+      }
+    >
       <div className="flex flex-col gap-5">
         <div className="flex flex-col gap-2">
           <span className="px-1 text-xs font-medium uppercase tracking-wide text-fg-faint">Deck</span>
@@ -77,9 +86,6 @@ export function CreateGameSheet({ open, onClose, initialDeckId }: CreateGameShee
           <span className="px-1 text-xs font-medium uppercase tracking-wide text-fg-faint">Settings</span>
           <GameSettingsForm settings={settings} onChange={handleChange} />
         </div>
-        <Button size="lg" fullWidth loading={loading} onClick={create}>
-          {loading ? "Creating room…" : "Create room"}
-        </Button>
       </div>
     </Sheet>
   );
